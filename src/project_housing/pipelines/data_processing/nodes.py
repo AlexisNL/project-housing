@@ -10,7 +10,7 @@ from sklearn.preprocessing import StandardScaler
    
 def _scale(x: pd.DataFrame) -> pd.DataFrame():
     scaler = StandardScaler()
-    char = x.drop('median_income', axis=1)
+    char = x.drop('median_house_value', axis=1)
     scaler.fit_transform(char)
 
 def _dummies(housing: pd.DataFrame) -> pd.DataFrame:
