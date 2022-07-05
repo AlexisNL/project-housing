@@ -13,7 +13,7 @@ def _scale(x: pd.DataFrame) -> pd.DataFrame():
     char = x.drop('median_house_value', axis=1)
     scaler.fit_transform(char)
 
-def _dummies(housing: pd.DataFrame) -> pd.DataFrame:
+def dummies(housing: pd.DataFrame) -> pd.DataFrame:
     """Preprocesses the data for housing dataframe.
 
     Args:
@@ -24,7 +24,7 @@ def _dummies(housing: pd.DataFrame) -> pd.DataFrame:
     housing = pd.get_dummies(housing, columns = ['ocean_proximity'])
     return housing
 
-def _scaler(housing: pd.DataFrame) -> pd.DataFrame:
+def scaler(housing: pd.DataFrame) -> pd.DataFrame:
     """Preprocesses the data for cancer dataframe.
 
     Args:
