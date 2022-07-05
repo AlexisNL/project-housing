@@ -3,10 +3,11 @@ from typing import Dict
 
 from kedro.pipeline import Pipeline
 
-from project_housing.pipelines import data_processing as dp
-from project_housing.pipelines import data_science as ds
+from .pipelines.data_science import pipeline as ds
+from .pipelines.data_processing import pipeline as dp
 
-def register_pipelines() -> Dict[str, Pipeline]:
+
+def register_pipelines(**kwargs) -> Dict[str, Pipeline]:
     """Register the project's pipelines.
 
     Returns:
