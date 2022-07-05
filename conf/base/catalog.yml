@@ -7,3 +7,19 @@ reviews:
   type: pandas.CSVDataSet
   filepath: data/01_raw/housing.csv
   layer: raw
+
+data_processing.preprocessed_housing:
+  type: pandas.ParquetDataSet
+  filepath: data/02_intermediate/preprocessed_housing.pq
+  layer: intermediate
+
+model_input_table:
+  type: pandas.ParquetDataSet
+  filepath: data/03_primary/model_input_table.pq
+  layer: primary
+
+regressor:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/regressor.pickle
+  versioned: true
+  layer: models

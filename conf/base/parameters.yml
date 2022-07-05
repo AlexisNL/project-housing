@@ -1,3 +1,2 @@
 test_size: 0.2
 random_state: 0
-feature: median_house_value
